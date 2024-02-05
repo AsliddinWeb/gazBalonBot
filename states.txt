@@ -1,0 +1,2 @@
+HOME = 1
+CABINET = 2
