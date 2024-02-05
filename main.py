@@ -135,12 +135,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
             gazbalon = await get_gazbalon_id(last_order['data']['gazbalon'])
             if last_order['status_code'] == 200:
                 await update.message.reply_html(
-                    text=f"<b>♻️ Oxirgi murojaatingiz xolati!</b>\n\n"
-                         f"🆔Murojaat ID: {last_order['data']['id']}\n"
-                         f"🧍‍♂ Murojatchi: {gazbalon['data']['name']}\n"
-                         f"📍 Manzil: {gazbalon['data']['address']}\n"
-                         f"📅 Yuborilgan vaqt: {datetime.fromisoformat(last_order['data']['created_at']).strftime("%Y-%m-%d %H:%M:%S")} da\n\n"
-                         f"🔹 Murojaat xolati: <b>{last_order['data']['ariza_xolati']}</b>."
+                    text=f"<b>♻️ Oxirgi murojaatingiz xolati!</b>\n\n🆔Murojaat ID: {last_order['data']['id']}\n🧍‍♂ Murojatchi: {gazbalon['data']['name']}\n📍 Manzil: {gazbalon['data']['address']}\n📅 Yuborilgan vaqt: {datetime.fromisoformat(last_order['data']['created_at'])} da\n\n🔹 Murojaat xolati: <b>{last_order['data']['ariza_xolati']}</b>."
                 )
 
 
